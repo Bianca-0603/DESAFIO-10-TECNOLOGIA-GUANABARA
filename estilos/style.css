@@ -1,0 +1,244 @@
+:root {
+  --cor0: #c5ebd6;
+  --cor1: #83e1ad;
+  --cor3: #3ddc84;
+  --cor4: #2fa866;
+  --cor5: #1a5c37;
+  --cor6: #063d1e;
+
+  --fonte-padrao: Arial, Helvetica, sans-serif;
+  --fonte-destaque: "bebas neue", sans-serif;
+  --fonte-android: "Idroid", sans-serif;
+}
+
+@font-face {
+  font-family: "Idroid";
+  src: url("/fontes/idroid.otf") format("opentype");
+}
+
+body {
+  background-color: var(--cor1);
+  font-family: var(--fonte-padrao);
+}
+
+header {
+  background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+  min-height: 150px; /*Coloca altura mínima para ser visualizado em qualquer dispositivo*/
+}
+
+header h1 {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-family: var(--fonte-destaque);
+  font-size: 3em;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+  text-align: center;
+  font-size: 1.2em;
+  padding: 15px;
+  margin: 0 auto;
+  font-family: var(--fonte-padrao);
+  text-shadow: 0px 7px 7px rgba(0, 0, 0, 0.425);
+ }
+
+nav {
+  text-align: left;
+  margin: -2px auto;
+  text-decoration: none;
+  padding: 10px;
+  background-color: var(--cor5);
+}
+
+nav a:hover {
+  cursor: pointer;
+  background-color: var(--cor4);
+  color: var(--cor6);
+  padding: 10px 10px;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+
+nav ul {
+  list-style: none;
+}
+
+.menu li {
+  display: inline;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.menu {
+  margin: 0;
+  font-size: 1.2em;
+  background-color: var(--cor5);
+  padding: 0 10px;
+  text-align: left;
+  border: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  min-width: 300px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: white;
+  margin: auto; /*Faz com que visto em telas cheias ele fique centralizado e não cresça para as laterais */
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(110, 110, 110, 0.466); /* sombra */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+main img {
+  width: 100%; /* Vai ocupar 100% do espaço disponível . As imagens irão se espremer e se adaptar ao tamanho da tela */
+}
+
+.pequena {
+  max-width: 350px; /*faz com que a imagem mantenha o mesmo tamanho em qualquer tamanho de dispositivo */
+  display: block; /* transforma a imagem em um bloco */
+  margin: auto; /* centraliza o bloco */
+}
+
+article h1 {
+  font-family: var(--fonte-android);
+  font-size: 2.2em;
+  color: var(--cor5);
+  font-weight: normal;
+}
+
+article h2 {
+  font-family: var(--fonte-android);
+  font-size: 1.3em;
+  color: var(--cor5);
+  background-image: linear-gradient(
+    to right, var(--cor1), var(--cor0), transparent);
+    font-weight: normal;
+}
+
+a.externo::after {
+  content: "\1F517"; /* Adiciona um ícone de link após o link externo */
+  }
+
+article a,strong {
+  color: var(--cor4);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main a:hover {
+  color: var(--cor4);
+  background-color: var(--cor0);
+  text-decoration: underline;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  padding: 2px 6px;
+}
+
+article h2 {
+  background-image: linear-gradient(to right, var(--cor0), transparent);
+  text-indent: 5px;
+}
+
+article p {
+  font-weight: bold;
+  margin: 15px 0;
+  text-align: justify;
+  text-indent: 30px; /* Indentação do primeiro parágrafo */
+  line-height: 1.3em; /* Espaçamento entre linhas */
+  font-size: 1em;
+}
+
+article h1 {
+  text-align: left;
+  font-size: 1.5em;
+  margin: 10px auto;
+}
+
+article {
+  background-color: white;
+  padding: 15px;
+  margin: 0 auto;
+  width: 80%;
+  text-align: justify;
+}
+
+.video {
+  background-color: var(--cor5);
+  padding: 20px;
+  margin: 0 -18px 30px -20px; /*tira a margem que o article tem por padrão */
+  position: relative;
+  padding-bottom: 50%;;
+}
+
+.video iframe {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 90%;
+  height: 80%;
+}
+
+
+aside {
+  background-color: var(--cor0);
+  text-align: justify;
+  padding: 0px 15px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(110, 110, 110, 0.562); /* sombra */
+  border: 5px solid var(--cor1);
+ }
+
+aside ul {
+list-style-position: inside;
+columns: 2;
+font-weight: bold;
+list-style-type: "\2705 \00a0 \0020";  /*insere emojis  -  barra invertida + numero do emoji.  apenas números   -   \00a0 e \0020  são códigos para espaços em branco  no Chrome. Não é compatível com todos os navegadoes. */
+ overflow-wrap: break-word; /* Permite quebras de palavra para evitar estouro */
+}
+
+h3 {
+  background-color: var(--cor5);
+  color: white;
+  font-family: var(--fonte-padrao);
+  padding: 5px; /*engorda por dentro */
+  margin: -10px -18px 0px -15px; /*tira a margem que o h3 tem por padrão */
+  border-radius:  10px 10px 0px 0px ; /*arredonda apenas os cantos de cima */
+}
+
+footer {
+  background-color: var(--cor5);
+  color: white;
+  text-align: center;
+  padding: 5px;
+  margin: 0 auto;
+  font-size: 0.8em;
+  font-family: var(--fonte-padrao);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-weight: border;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-size: 0.8em;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+  color: var(--cor1);
+}
